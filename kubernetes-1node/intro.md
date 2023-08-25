@@ -3,6 +3,6 @@
 
 ### Welcome !
 
-In this scenario we'll learn how to list all pods in the cluster.
+In this scenario we'll learn how to install kubectl OpenAI Plugin for the Kubernetes cluster.
 
 **HAVE FUN**
