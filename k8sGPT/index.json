@@ -1,13 +1,13 @@
 {
-  "title": "Kubectl OpenAI Plugin",
-  "description": "Generate and apply Kubernetes manifests using OpenAI GPT.",
+  "title": "K8sGPT",
+  "description": "A tool for scanning your Kubernetes clusters, diagnosing, and triaging issues in simple English.",
   "details": {
     "intro": {
       "text": "intro.md"
     },
     "steps": [
       {
-        "title": "Install Kubectl OpenAI Plugin",
+        "title": "Installing K8sGPT",
         "text": "step1.md"
       }
     ],
