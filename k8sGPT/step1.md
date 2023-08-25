@@ -31,7 +31,7 @@ Step 4. Enabling the authentication
 Run k8sgpt auth add to set it in k8sgpt.
 
 ```plain
-k8sgpt auth add default
+k8sgpt auth default
 ```{{exec}}
 
 You can also provide the password directly using the --password flag.
