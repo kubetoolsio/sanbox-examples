@@ -5,7 +5,7 @@
 Step 1. Run the following command:
 
 ```plain
-curl -LO https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.3.13/k8sgpt_amd64.deb
+curl -LO https://github.com/k8sgpt-ai/k8sgpt/releases/download/v0.3.6/k8sgpt_amd64.deb
 sudo dpkg -i k8sgpt_amd64.deb
 ```{{exec}}
 
