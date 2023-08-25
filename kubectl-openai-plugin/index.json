@@ -1,0 +1,21 @@
+{
+  "title": "Kubectl OpenAI Plugin",
+  "description": "Generate and apply Kubernetes manifests using OpenAI GPT.",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+    "steps": [
+      {
+        "title": "Install Kubectl OpenAI Plugin",
+        "text": "step1.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}
