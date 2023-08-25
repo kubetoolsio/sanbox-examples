@@ -36,15 +36,25 @@ k8sgpt auth default
 
 You can also provide the password directly using the --password flag.
 
-Step 5. Managing the active filters by the analyzer
+Step 5. List the auth
+
+Run k8sgpt auth list the configured providers
+
+```plain
+k8sgpt auth list
+```{{exec}}
+
+
+
+Step 6. Managing the active filters by the analyzer
 
 Run k8sgpt filters to manage the active filters used by the analyzer. By default, all filters are executed during analysis.
 
 ```plain
-k8sgpt filters
+k8sgpt filters list
 ```{{exec}}
 
-Step 6. Run a Scan
+Step 7. Run a Scan
 
 Run k8sgpt analyze to run a scan.
 
@@ -52,7 +62,7 @@ Run k8sgpt analyze to run a scan.
 k8sgpt analyze
 ```{{exec}}
 
-Step 7. Detailed Explanation of the Issues
+Step 8. Detailed Explanation of the Issues
 
 Use k8sgpt analyze --explain to get a more detailed explanation of the issues
 
@@ -60,7 +70,7 @@ Use k8sgpt analyze --explain to get a more detailed explanation of the issues
 k8sgpt analyze --explain
 ```{{exec}}
 
-Step 8. Get the official documentation from Kubernetes.io site
+Step 9. Get the official documentation from Kubernetes.io site
 
 You also run k8sgpt analyze --with-doc (with or without the explain flag) to get the official documention from kubernetes.
 
