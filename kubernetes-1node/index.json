@@ -1,6 +1,6 @@
 {
-  "title": "Kubernetes 1node",
-  "description": "Use a simple one node Kubernetes cluster and let user list all pods",
+  "title": "Kubectl OpenAI Plugin",
+  "description": "Generate and apply Kubernetes manifests using OpenAI GPT.",
   "details": {
     "intro": {
       "text": "intro.md"
