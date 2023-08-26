@@ -26,13 +26,15 @@ You can do this by running k8sgpt generate to open a browser link to generate it
 k8sgpt generate
 ```{{exec}}
 
-Step 4. Enabling the authentication
+Step 4. Enabling the authentication for OpenAI
 
 Run k8sgpt auth add to set it in k8sgpt.
 
 ```plain
-k8sgpt auth default
+k8sgpt auth add
 ```{{exec}}
+
+Please input the OpenAI Key.
 
 You can also provide the password directly using the --password flag.
 
@@ -44,17 +46,44 @@ Run k8sgpt auth list the configured providers
 k8sgpt auth list
 ```{{exec}}
 
-
-
-Step 6. Managing the active filters by the analyzer
-
-Run k8sgpt filters to manage the active filters used by the analyzer. By default, all filters are executed during analysis.
+Step 6. Create a YAML file
 
 ```plain
-k8sgpt filters list
+echo "apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:latest
+        resources:
+          limits:
+            memory: 4Gi" >> deploy.yaml
 ```{{exec}}
 
-Step 7. Run a Scan
+Step 7. Deploy the Pod
+
+
+```plain
+kubectl apply -f deploy.yaml
+```{{exec}}
+
+
+You will notice that Pod consumes more than 4GB that exceeds the default memory size allocated to the instance.
+
+
+
+Step 8. Run a Scan
 
 Run k8sgpt analyze to run a scan.
 
@@ -62,7 +91,9 @@ Run k8sgpt analyze to run a scan.
 k8sgpt analyze
 ```{{exec}}
 
-Step 8. Detailed Explanation of the Issues
+It should show the error message.
+
+Step 9. Detailed Explanation of the Issues
 
 Use k8sgpt analyze --explain to get a more detailed explanation of the issues
 
@@ -70,7 +101,7 @@ Use k8sgpt analyze --explain to get a more detailed explanation of the issues
 k8sgpt analyze --explain
 ```{{exec}}
 
-Step 9. Get the official documentation from Kubernetes.io site
+Step 10. Get the official documentation from Kubernetes.io site
 
 You also run k8sgpt analyze --with-doc (with or without the explain flag) to get the official documention from kubernetes.
 
