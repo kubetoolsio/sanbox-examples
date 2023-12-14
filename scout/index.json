@@ -1,0 +1,21 @@
+{
+  "title": "Docker Scout",
+  "description": "A collection of secure software supply chain capabilities that provide insights into the composition and security of container images",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+    "steps": [
+      {
+        "title": "Installing K8sGPT",
+        "text": "step1.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}
