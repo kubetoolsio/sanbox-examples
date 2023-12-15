@@ -88,7 +88,7 @@ docker build -t $ORG/scout-demo:v2 .
 Step 11.  Verify if the vulnerabilities is fixed or not
 
  ```plain
-docker scout cves --only-vuln-packages --format only-packages $ORG/scout-demo:v1
+docker scout cves --only-vuln-packages --format only-packages $ORG/scout-demo:v2
 ```{{exec}}
 
 
