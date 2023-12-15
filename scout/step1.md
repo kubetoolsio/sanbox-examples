@@ -6,7 +6,7 @@
 
 ```plain
   mkdir $HOME/.docker
-```
+```{{exec}}
 
 
 Step 1. Run the following command:
