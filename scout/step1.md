@@ -124,7 +124,7 @@ Step 15. Re-building the Image
 
 ```plain
  docker build -t $ORG/scout-demo:v3 .
-```
+```{{exec}}
 
 Step 16. Verifying if all the vulnerabilities are fixed
 
