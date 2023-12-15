@@ -16,7 +16,7 @@ curl -sSfL https://raw.githubusercontent.com/docker/scout-cli/main/install.sh | 
 ```{{exec}}
 
 
-Step 2. Verify if K8sGPT is installed correctly
+Step 2. Verify if Docker Scout is installed correctly
 
 ```plain
 docker scout version
@@ -60,6 +60,26 @@ Step 7. Check the vulnerabilities
 
 ```plain
 docker scout quickview
+```{{exec}}
+
+
+Step 8. Run the below command to filter only vulnerable packages
+
+ ```plain
+docker scout cves --only-vuln-packages --format only-packages $ORG/scout-demo:v1
+```{{exec}}
+
+
+Step 9. Fix the vulnerability related to express
+
+```plain
+ sed -i 's/"express": "4.17.1"/"express": "4.17.3"/' package.json
+```{{exec}}
+
+Step 10.  Verify if the vulnerabilities is fixed or not
+
+ ```plain
+docker scout cves --only-vuln-packages --format only-packages $ORG/scout-demo:v1
 ```{{exec}}
 
 
