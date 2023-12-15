@@ -76,7 +76,16 @@ Step 9. Fix the vulnerability related to express
  sed -i 's/"express": "4.17.1"/"express": "4.17.3"/' package.json
 ```{{exec}}
 
-Step 10.  Verify if the vulnerabilities is fixed or not
+
+Step 10. Re-build the Docker Image and tag it with v2
+
+
+```plain
+docker build -t $ORG/scout-demo:v2 .
+```{{exec}}
+
+
+Step 11.  Verify if the vulnerabilities is fixed or not
 
  ```plain
 docker scout cves --only-vuln-packages --format only-packages $ORG/scout-demo:v1
