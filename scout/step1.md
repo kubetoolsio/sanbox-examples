@@ -97,11 +97,19 @@ Step 12. Push the image to Docker Hub
 docker push $ORG/scout-demo:v2 .
 ```{{exec}}
 
+
+Step 13. Enable the Scout for this repository
+
+```plain
+ docker scout repo enable --org $ORG $ORG/scout-demo
+```{{exec}}
+
+
 Step 13. Access the Scout Dashboard
 
 Open https://scout.docker.com to access the vulnerabilities
 
-<img width="1342" alt="image" src="https://github.com/kubetoolsio/sanbox-examples/assets/142371896/f9556382-fdd8-423b-a58f-1a71e9a3915f">
+<img width="1429" alt="image" src="https://github.com/kubetoolsio/sanbox-examples/assets/142371896/dd2ca592-9eb1-4fd5-bce4-778aab82d0cf">
 
 
 
