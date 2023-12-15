@@ -94,7 +94,7 @@ docker scout cves --only-vuln-packages --format only-packages $ORG/scout-demo:v2
 Step 12. Push the image to Docker Hub
 
 ```plain
-docker push $ORG/scout-demo:v2 .
+docker push $ORG/scout-demo:v2 
 ```{{exec}}
 
 
@@ -110,6 +110,33 @@ Step 13. Access the Scout Dashboard
 Open https://scout.docker.com to access the vulnerabilities
 
 <img width="1429" alt="image" src="https://github.com/kubetoolsio/sanbox-examples/assets/142371896/dd2ca592-9eb1-4fd5-bce4-778aab82d0cf">
+
+
+Step 14. Fixing the base Image Vulnerabilities
+
+
+
+```plain
+ sed -i '1s/^FROM.*/FROM alpine:3.18/' Dockerfile
+```{{exec}}
+
+Step 15. Re-building the Image
+
+```plain
+ docker build -t $ORG/scout-demo:v3 .
+```
+
+Step 16. Verifying if all the vulnerabilities are fixed
+
+ ```plain
+docker scout cves --only-vuln-packages --format only-packages $ORG/scout-demo:v1
+```{{exec}}
+
+Step 17. Access the Scout Dashboard
+
+Open https://scout.docker.com to verify if it gets reflected in the dashboard
+
+<img width="1477" alt="image" src="https://github.com/kubetoolsio/sanbox-examples/assets/142371896/581b7885-5cce-4c9f-aee2-4859b67e2d9e">
 
 
 
