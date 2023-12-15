@@ -2,6 +2,13 @@
 > Click the below command to set it up.
 > 
 
+## Prerequisite
+
+```plain
+  mkdir $HOME/.docker
+```
+
+
 Step 1. Run the following command:
 
 ```plain
