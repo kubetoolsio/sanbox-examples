@@ -91,4 +91,17 @@ Step 11.  Verify if the vulnerabilities is fixed or not
 docker scout cves --only-vuln-packages --format only-packages $ORG/scout-demo:v2
 ```{{exec}}
 
+Step 12. Push the image to Docker Hub
+
+```plain
+docker push $ORG/scout-demo:v2 .
+```{{exec}}
+
+Step 13. Access the Scout Dashboard
+
+Open https://scout.docker.com to access the vulnerabilities
+
+<img width="1342" alt="image" src="https://github.com/kubetoolsio/sanbox-examples/assets/142371896/f9556382-fdd8-423b-a58f-1a71e9a3915f">
+
+
 
