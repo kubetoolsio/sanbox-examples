@@ -7,7 +7,7 @@
     },
     "steps": [
       {
-        "title": "Installing K8sGPT",
+        "title": "Installing Docker Scout",
         "text": "step1.md"
       }
     ],
